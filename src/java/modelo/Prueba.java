@@ -20,7 +20,14 @@ public class Prueba {
         Conexion conexion = Conexion.getConexion();
         Empleado m= new Empleado();
         EmpleadoDAO mdao = new EmpleadoDAO();
-
+String cod = JOptionPane.showInputDialog("Digite el Codigo del Empleado a Buscar");
+    m.setCodigo(cod);
+     m = mdao.buscar(m);
+        System.out.println("Cedula: "+m.getCedula());
+        System.out.println("Nombre: "+m.getNombre());
+        System.out.println("Fecha de Nacimiento: "+m.getFechaNacimiento());
+        System.out.println("Fecha de Ingreso: "+m.getFechaIngreso());
+        System.out.println("Fecha de Retiro: "+m.getFechaRetiro());
         
         
         m.setCodigo("48434");
@@ -31,14 +38,7 @@ public class Prueba {
         m.setFechaRetiro(Date.valueOf("2022-01-19"));    
         mdao.insertar(m);
         
-          String cod = JOptionPane.showInputDialog("Digite el Codigo del Empleado a Buscar");
-    m.setCodigo(cod);
-       mdao.buscar(m);
-        System.out.println("Cedula: "+m.getCedula());
-        System.out.println("Nombre: "+m.getNombre());
-        System.out.println("Fecha de Nacimiento: "+m.getFechaNacimiento());
-        System.out.println("Fecha de Ingreso: "+m.getFechaIngreso());
-        System.out.println("Fecha de Retiro: "+m.getFechaRetiro());     
+               
        
     }
 }
