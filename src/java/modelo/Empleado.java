@@ -5,6 +5,8 @@
  */
 package modelo;
 
+import java.util.Date;
+
 /**
  *
  * @author NELSON
@@ -13,14 +15,14 @@ public class Empleado {
     private String codigo;
      private String cedula;
      private String nombre;
-      private String fechaNacimiento;
-       private String fechaIngreso;
-        private String fechaRetiro;
+      private Date fechaNacimiento;
+       private Date fechaIngreso;
+        private Date fechaRetiro;
 
     public Empleado() {
     }
 
-    public Empleado(String codigo, String cedula, String nombre, String fechaNacimiento, String fechaIngreso, String fechaRetiro) {
+    public Empleado(String codigo, String cedula, String nombre, Date fechaNacimiento, Date fechaIngreso, Date fechaRetiro) {
         this.codigo = codigo;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -28,6 +30,8 @@ public class Empleado {
         this.fechaIngreso = fechaIngreso;
         this.fechaRetiro = fechaRetiro;
     }
+
+   
 
     public String getCodigo() {
         return codigo;
@@ -53,29 +57,31 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public String getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public String getFechaIngreso() {
+    public Date getFechaIngreso() {
         return fechaIngreso;
     }
 
-    public void setFechaIngreso(String fechaIngreso) {
+    public void setFechaIngreso(Date fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
-    public String getFechaRetiro() {
+    public Date getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public void setFechaRetiro(String fechaRetiro) {
+    public void setFechaRetiro(Date fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
+
+   
         
   
     

@@ -7,6 +7,7 @@ package controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -80,13 +81,15 @@ String codigo,cedula,nombre,nacimiento,ingreso,retiro="";
         nacimiento = request.getParameter("nacimiento");
         ingreso = request.getParameter("ingreso");
         retiro = request.getParameter("retiro");
-                   
+          Date date=Date.valueOf(nacimiento);
+ Date date2=Date.valueOf(ingreso);
+  Date date3=Date.valueOf(retiro);
                 m.setCodigo(codigo);
                 m.setCedula(cedula);
 		m.setNombre(nombre);
-		m.setFechaNacimiento(nacimiento);
-		m.setFechaIngreso(ingreso);
-		m.setFechaRetiro(retiro);
+		m.setFechaNacimiento(date);
+		m.setFechaIngreso(date2);
+		m.setFechaRetiro(date3);
                 mdao.insertar(m);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
@@ -107,7 +110,8 @@ String codigo,cedula,nombre,nacimiento,ingreso,retiro="";
                         codigo = request.getParameter("codigo");
         retiro = request.getParameter("retiro");                  
                 m.setCodigo(codigo); 
-		m.setFechaRetiro(retiro);               
+                 Date date_act=Date.valueOf(retiro);
+		m.setFechaRetiro(date_act);               
                 mdao.actualizar(m);
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
                         break;

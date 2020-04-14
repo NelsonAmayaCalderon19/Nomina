@@ -7,6 +7,7 @@ package modelDAO;
 
 import config.Conexion;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Empleado;
@@ -24,7 +25,7 @@ public class EmpleadoDAO {
     }
     
     public void insertar(Empleado empleado){
-        String sql="insert into empleado (codigo,cedula,nombre,fechanacimiento,fechaingreso,fecharetiro) values('"+empleado.getCodigo()+"','"+empleado.getCedula()+"','"+empleado.getNombre()+"','"+empleado.getFechaNacimiento()+"','"+empleado.getFechaIngreso()+"','"+empleado.getFechaRetiro()+"')";
+        String sql="insert into empleado (codigo,cedula,nombre,fechanacimiento,fechaingreso,fecharetiro) values('"+empleado.getCodigo()+"','"+empleado.getCedula()+"','"+empleado.getNombre()+"','"+ (Date)empleado.getFechaNacimiento()+"','"+(Date)empleado.getFechaIngreso()+"','"+(Date)empleado.getFechaRetiro()+"')";
         try {
             con.insert(sql);
         } catch (SQLException ex) {

@@ -62,9 +62,9 @@ public class Conexion {
         m.setCodigo(res.getString(1));
         m.setCedula(res.getString(2));
         m.setNombre(res.getString(3));
-        m.setFechaNacimiento(res.getString(4));
-        m.setFechaIngreso(res.getString(5));
-        m.setFechaRetiro(res.getString(6));
+        m.setFechaNacimiento(res.getDate(4));
+        m.setFechaIngreso(res.getDate(5));
+        m.setFechaRetiro(res.getDate(6));
         }
         return m;
     }
