@@ -19,10 +19,18 @@
                 margin:0px;
             }
             body{
+                background-image: url("https://paynext.com.mx/wp-content/uploads/2019/05/todo-sobre-un-software-de-n%C3%B3mina_imgdest.jpg");
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	height: 100%;
+                margin-top: 10%;
+                display: flex;
                 justify-content: center;
-                text-align: center;
+                align-items: center;
+  
             }
             a{
+                margin-left: 10px;
                 text-decoration: none;
             }
         </style>

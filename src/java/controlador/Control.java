@@ -96,8 +96,13 @@ public class Control extends HttpServlet {
                     String cod = request.getParameter("campo");                   
 		m.setCodigo(cod);
                 m = mdao.buscar(m);
-                request.setAttribute("empleado", m);
+                
+                if(m.getCedula()!=null){
+                    request.setAttribute("empleado", m);
                 request.getRequestDispatcher("registrar.jsp").forward(request, response);
+                }else{
+                   request.getRequestDispatcher("buscar.jsp").forward(request, response);
+                }
                     break;
                    
                 default:
