@@ -19,7 +19,7 @@ import modelo.Empleado;
  * @author NELSON
  */
 public class Control extends HttpServlet {
-
+String codigo,cedula,nombre,nacimiento,ingreso,retiro="";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -74,12 +74,12 @@ public class Control extends HttpServlet {
          if(menu.equalsIgnoreCase("Empleado")){
             switch (accion){
                 case "Registrar":
-                    String codigo = request.getParameter("codigo");
-                    String cedula = request.getParameter("cedula");
-                    String nombre = request.getParameter("nombre");
-        String nacimiento = request.getParameter("nacimiento");
-        String ingreso = request.getParameter("ingreso");
-        String retiro = request.getParameter("retiro");
+                    codigo = request.getParameter("codigo");
+                    cedula = request.getParameter("cedula");
+                    nombre = request.getParameter("nombre");
+        nacimiento = request.getParameter("nacimiento");
+        ingreso = request.getParameter("ingreso");
+        retiro = request.getParameter("retiro");
                    
                 m.setCodigo(codigo);
                 m.setCedula(cedula);
@@ -87,7 +87,6 @@ public class Control extends HttpServlet {
 		m.setFechaNacimiento(nacimiento);
 		m.setFechaIngreso(ingreso);
 		m.setFechaRetiro(retiro);
-
                 mdao.insertar(m);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 
@@ -99,11 +98,19 @@ public class Control extends HttpServlet {
                 
                 if(m.getCedula()!=null){
                     request.setAttribute("empleado", m);
-                request.getRequestDispatcher("registrar.jsp").forward(request, response);
+                request.getRequestDispatcher("actualizar.jsp").forward(request, response);
                 }else{
                    request.getRequestDispatcher("buscar.jsp").forward(request, response);
                 }
                     break;
+                    case "Actualizar":
+                        codigo = request.getParameter("codigo");
+        retiro = request.getParameter("retiro");                  
+                m.setCodigo(codigo); 
+		m.setFechaRetiro(retiro);               
+                mdao.actualizar(m);
+                request.getRequestDispatcher("/index.jsp").forward(request, response);
+                        break;
                    
                 default:
                     throw new AssertionError();

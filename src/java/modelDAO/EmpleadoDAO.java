@@ -41,5 +41,12 @@ public class EmpleadoDAO {
         }
         return m;
     }
-    
+    public void actualizar(Empleado empleado){
+String sql = "update empleado set fecharetiro='"+empleado.getFechaRetiro()+"' where codigo='"+empleado.getCodigo()+"'";
+try {
+          con.actualizar(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpleadoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+}
 }
