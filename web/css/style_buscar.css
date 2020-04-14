@@ -1,0 +1,27 @@
+*{
+                padding: 0px;
+                margin:0px;
+            }
+ 
+ 
+            body{
+                 background-image: url("https://previews.123rf.com/images/scanrail/scanrail1302/scanrail130200021/18022330-financiaci%C3%B3n-de-las-empresas-impuestos-contabilidad-estad%C3%ADstica-y-anal%C3%ADtica-concepto-de-oficina-de-investig.jpg");
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	height: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-top: 2%;
+            }
+            #campo{
+                width: 250px;
+            }
+            label,#campo,input{
+                display: inline;
+            }
+            label{
+                color: red;
+                font-size: 30px;
+                font-family: times new roman;
+            }
+

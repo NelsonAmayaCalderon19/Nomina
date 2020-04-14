@@ -15,89 +15,7 @@
         <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
         <title>Registrar Empleado</title>
-        <style>
-            *{
-                padding: 0px;
-                margin:0px;
-            }
-            body{
-                background-image: url("https://lh3.googleusercontent.com/proxy/iXpBL9dtQ-cr8RfiVVfu08fQd6u0Cc2xklyTh-D2p7FOLeypT-IIX5QD5j7KDIMcR4rPalGsuoF1OAmk7F2CICSFAddCoZx4saNkCvXpneWf8jOqlaK4");
-    	background-size: cover;
-    	background-repeat: no-repeat;
-    	height: 100%;
-                justify-content: center;
-                text-align: center;
-            }
-            
-            #tit_codigo,#codigo{
-                display: inline;
-            }
-            #tit_cedula,#cedula{
-                display: inline;
-            }
-            #tit_nombre,#nombre{
-                display: inline;
-            }
-             #tit_nacimiento,#nacimiento{
-                display: inline;
-            }
-             #tit_ingreso,#ingreso{
-                display: inline;
-            }
-             #tit_retiro,#retiro{
-                display: inline;
-            }
-            #contenido{
-                justify-content: center;
-                text-align: center;
-                border: 1px solid gray;
-                margin: 0px auto;
-                margin-top: 20px;
-                padding: 10px;
-                width: 40%;
-                height: auto;
-                background-color: white;
-            }
-            #campos{
-                height: 85%;
-                justify-content: center;
-                text-align: right;
-            }
-            #botones{
-                margin-top: 5px;
-            height: 15%;
-            justify-content: center;
-                text-align: center;
-            }
-            .icono{
-                color: gray;
-                font-size: 2em;
-            }
-            #volver{
-                text-decoration: none;
-                padding: 5px;
-                width: 100px;
-                color:white;
-            }
-            #registrar{
-                padding: 5px;
-                width: 100px;
-            }
-            #codigo,#cedula,#nombre{
-                width:65%;
-            }
-            #nacimiento,#ingreso,#retiro{
-                width:50%;
-            }
-            h1{
-                text-align: center;
-                color: red;
-            }
-            i{
-                margin-left: 3px;
-            }
-            
-        </style>
+        <link href="css/style_actualizar.css" rel="stylesheet">
     </head>
     <body>
         <div id="contenido">
@@ -117,16 +35,6 @@
         <div>
         </form>
         </div>
-        <script>
-                 function validarFormulario(){
-    var txtRetiro = document.getElementById('retiro').value;
-    if(txtRetiro == null || txtRetiro.length == 0){
-        document.getElementById("retiro").focus();
-                alertify.alert("Advertencia!","Fecha de Retiro no Válida"); 
-      return false;
-    }
-                 }
-
-        </script>
+<script src="js/actualizar.js" type="text/javascript"></script>
     </body>
 </html>

@@ -13,34 +13,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
         <title>Buscar Empleado</title>
-                <style>
-            *{
-                padding: 0px;
-                margin:0px;
-            }
- 
- 
-            body{
-                 background-image: url("https://previews.123rf.com/images/scanrail/scanrail1302/scanrail130200021/18022330-financiaci%C3%B3n-de-las-empresas-impuestos-contabilidad-estad%C3%ADstica-y-anal%C3%ADtica-concepto-de-oficina-de-investig.jpg");
-    	background-size: cover;
-    	background-repeat: no-repeat;
-    	height: 100%;
-                justify-content: center;
-                text-align: center;
-                margin-top: 2%;
-            }
-            #campo{
-                width: 250px;
-            }
-            label,#campo,input{
-                display: inline;
-            }
-            label{
-                color: red;
-                font-size: 30px;
-                font-family: times new roman;
-            }
-        </style>
+<link href="css/style_buscar.css" rel="stylesheet">
     </head>
     <body>
         <form class="empleado" action="Control?menu=Empleado" method="POST" id="data" >
